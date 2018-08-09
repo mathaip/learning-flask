@@ -1,4 +1,4 @@
-from flask_sqlalchemy import SQLAlchemy
+from Flask_sqlalchemy import SQLAlchemy
 from werkzeug import generate_password_hash, check_password_hash
 
 
@@ -40,11 +40,15 @@ class Place(object):
     return urllib.parse.urljoin("http://en.wikipedia.org/wiki/", slug.replace(' ', '_'))
   
   def address_to_latlng(self, address):
+    print(address)
     g = geocoder.google(address)
+    print(g)
     return (g.lat, g.lng)
 
   def query(self, address):
     lat, lng = self.address_to_latlng(address)
+
+    print(lat,lng)
     
     query_url = 'https://en.wikipedia.org/w/api.php?action=query&list=geosearch&gsradius=5000&gscoord={0}%7C{1}&gslimit=20&format=json'.format(lat, lng)
     g = urllib.request.urlopen(query_url)
@@ -52,7 +56,9 @@ class Place(object):
     g.close()
 
     data = json.loads(results)
-    
+
+    print(data)
+
     places = []
     for place in data['query']['geosearch']:
       name = place['title']
