@@ -27,6 +27,8 @@ a {
 .container {
   width: 1000px;
   margin: 0 auto;
+  background-color: : powderblue;
+  font: timesnewroman 
 }
 
 .pull-left {
@@ -61,29 +63,21 @@ a {
   background: #4285f4;
   border: 1px solid #1266f1;
   color: #ffffff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'timesnewroman', sans-serif;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.23px;
-  padding: 12px 32px;
-  text-align: center;
+  padding: 50px 50px;
+  text-align: left;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.btn-secondary {
-  background: #ffffff;
-  border: 1px solid #e6e6e6;
-  color: #3372df;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.23px;
-  padding: 12px 32px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-}
+
+
+
+
+
 
 
 
@@ -92,8 +86,8 @@ a {
  */
 
 header {
-  background-color: #fff;
-  padding: 25px 0;
+  background-color:powderblue;
+  padding: 35px 0;
 }
 
 .title {
@@ -138,6 +132,7 @@ header {
 .hero-section .section-content {
   position: relative;
   top: 100px;
+  color: red;
 }
 
 .hero-section .section-content h2 {
